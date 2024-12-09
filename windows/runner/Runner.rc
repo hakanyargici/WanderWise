@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "wanderwise" "\0"
+            VALUE "FileDescription", "ders_2" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "wanderwise" "\0"
+            VALUE "InternalName", "ders_2" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2024 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "wanderwise.exe" "\0"
-            VALUE "ProductName", "wanderwise" "\0"
+            VALUE "OriginalFilename", "ders_2.exe" "\0"
+            VALUE "ProductName", "ders_2" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END
