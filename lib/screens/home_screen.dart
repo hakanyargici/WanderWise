@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'blog_category.dart';
-import 'blog_details.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
