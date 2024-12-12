@@ -10,6 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
   google_fonts: ^5.0.0
+  webview_flutter: ^3.0.0
 
 dev_dependencies:
   flutter_test:
@@ -18,3 +19,11 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/WanderWise.png
+    - assets/bali.jpg
+    - assets/paris.jpg
+    - assets/yenizellanda.jpg
+    - assets/sliderimage1.jpg
+    - assets/sliderimage2.jpg
+    - assets/sliderimage3.jpg
