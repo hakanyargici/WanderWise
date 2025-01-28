@@ -1,62 +1,84 @@
 # WanderWise
 
-## Proje Adı
-**WanderWise**
+![İstinye Üniversitesi](https://www.unitededucation.com/linklogoch/istinye-university-logo.png)
 
-## Uygulama Açıklaması
-Renk teorisine dayalı bir tasarımla kullanıcı dostu bir seyahat rehberi. Kullanıcı, seyahat öncesi uygulama içerisinde gitmek istediği kıta, ülke ve şehirleri filtreleyerek gideceği yer hakkında seyahat rotası oluşturmasına katkı sağlar.
+## Proje Hakkında
 
-## Ana Renkler
-- **Turuncu**
-- **Lacivert**
-- **Beyaz**
+WanderWise, renk teorisine dayalı bir tasarımla geliştirilmiş, kullanıcı dostu bir seyahat rehberi uygulamasıdır. Kullanıcılar, seyahat etmeyi planladıkları kıta, ülke veya şehirleri filtreleyerek seyahat rotaları oluşturabilir.
 
-### Gece/Gündüz Modu
-**Hayır**
+## Takım Üyeleri ve Görev Dağılımı
 
-#### Gündüz Modu Renkleri
-- **Primary:** #FF7043  
-- **Secondary:** #ECEFF1  
-- **Background:** #FFFFFF  
+- **Danışman:**
+  [Keyvan Arasteh](https://github.com/keyvanarasteh)
 
-## Ekranlar
+- **Takım Üyeleri:**
+  - **Yusuf Hakan Yargıcı** | 2320161118 | Frontend Geliştirme ve Tasarım
+  - **Recep Şahin** | 2320161109 | Proje Yönetimi
+## Kullanılan Teknolojiler
 
-### Ana Sayfa
-- Slider alanı
-- Blog detay önizleme yazılarının bulunduğu kısım
-- Öne çıkan kategoriler
+- Flutter
+- Dart
 
-### Blog Kategori Sayfası
-- İlgili kategoriye ait görsel alan
-- Kategori detay yazılarının önizlemesi
-- Filtreleme
+## Projenin Özellikleri
 
-### Blog Detay Sayfası
-- Görsel içerik
-- Seyahat yazıları
-- Paylaşım seçenekleri
+- Popüler destinasyonların görüntülenmesi
+- Favorilere ekleme
+- Hızlı arama ve filtreleme
 
-## Gelecek Planlaması
-- Blog detay sayfasına harita yönlendirmesi eklenecek.
-- Gezi videolarının bulunduğu yeni kategori sayfası oluşturulacak.
-- Kullanıcı login sistemi getirilecek.
-- Gece & Gündüz modu yapılacak.
-- Puanlama sistemi getirilecek.
-- Kullanıcı, seyahat yazısı ekleyebilecek.
+## Kurulum Adımları
 
-## Dil Desteği
-- **Türkçe**
+### Gereksinimler
 
-## Fonksiyonlar ve Özellikler
-- **Popüler Destinasyonlar:** Ana sayfada öne çıkan birkaç destinasyon önerisi sunulur.
-- **Favorilere Ekleme:** Kullanıcılar, önerilen destinasyonları favorilerine kaydedebilir.
-- **Hızlı Arama:** Kullanıcılar, gitmek istedikleri destinasyonları arayabilir.
+- Flutter SDK 3.24.4
+- Dart SDK 3.5.4
+- DevTools 2.37.3
 
-## Benzer Uygulamalar
-- Gezimanya
-- Culture Trip
-- Tripadvisor
+### Kurulum
 
-## Geliştiriciler (Öğrenciler)
-- **Yusuf Hakan Yargıcı | 2320161118**  
-- **Recep Şahin | 2320161109**
+1. Projeyi bilgisayarınıza indirin:
+
+```
+git clone [proje-adresi]
+```
+
+2. Proje klasörüne gidin:
+
+```
+cd [proje-adı]
+```
+
+3. Gerekli paketleri yükleyin:
+
+```
+flutter pub get
+```
+
+4. Uygulamayı başlatın:
+
+```
+flutter run
+```
+
+## Proje Yapısı
+
+```
+Güncellenecek
+```
+
+## Katkıda Bulunanlar
+
+- **Yusuf Hakan Yargıcı**
+- **Recep Şahin**
+
+## Lisans
+
+Bu proje, [Lisans türü] kapsamında lisanslanmıştır. Daha fazla bilgi için `LICENSE` dosyasını inceleyebilirsiniz.
+
+## İletişim
+
+- Proje Bağlantısı: [GitHub repository linki]
+- İstinye Üniversitesi: [https://www.istinye.edu.tr/](https://www.istinye.edu.tr/)
+
+## Teşekkürler
+
+- İstinye Üniversitesi'ne destekleri için teşekkür ederiz.
