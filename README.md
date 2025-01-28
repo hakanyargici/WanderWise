@@ -1,6 +1,6 @@
 # WanderWise
 
-![WanderWise-Logo](assets/WanderWise.png "WanderWise Logo")
+![WanderWise-Logo](assets/logo-mix.png "WanderWise Logo")
 
 ## Proje Hakkında
 
@@ -89,10 +89,10 @@ Bu proje, [Lisans türü] kapsamında lisanslanmıştır. Daha fazla bilgi için
 
 ## İletişim
 
-- Proje Bağlantısı: [\[GitHub repository linki\]](https://github.com/hakanyargici/WanderWise)
+- Proje Bağlantısı: [\[Wander Wise Github\]](https://github.com/hakanyargici/WanderWise)
 - İstinye Üniversitesi: [https://www.istinye.edu.tr/](https://www.istinye.edu.tr/)
 
 ## Teşekkürler
 
 - İstinye Üniversitesi'ne destekleri için teşekkür ederiz.
-- Bu dersi verdiği ve her an yanımızda olduğu için Keyvan Arasteh'e teşekkür ederiz.
+- Bu dersi verdiği ve her an yanımızda olduğu için [Keyvan Arasteh'a](https://github.com/keyvanarasteh) teşekkür ederiz.
