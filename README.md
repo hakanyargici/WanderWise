@@ -1,41 +1,40 @@
-# wanderwise
-# Proje Adı  
-WanderWise  
+# WanderWise
 
-A new Flutter project.
-## Uygulama Açıklaması  
-Renk teorisine dayalı bir tasarımla kullanıcı dostu bir seyahat rehberi. Kullanıcı, seyahat öncesi uygulama içerisinde gitmek istediği kıta, ülke ve 
-şehirleri filtreleyerek gideceği yer hakkında seyahat rotası oluşturmasına katkı sağlar.
- 
-## Ana Renkler  
-- Turuncu  
-- Lacivert  
-- Beyaz  
+## Proje Adı
+**WanderWise**
 
-### Gece/Gündüz Modu  
-- Hayır
+## Uygulama Açıklaması
+Renk teorisine dayalı bir tasarımla kullanıcı dostu bir seyahat rehberi. Kullanıcı, seyahat öncesi uygulama içerisinde gitmek istediği kıta, ülke ve şehirleri filtreleyerek gideceği yer hakkında seyahat rotası oluşturmasına katkı sağlar.
 
-### Gündüz Modu Renkleri  
-- Primary: #FF7043  
-- Secondary: #ECEFF1  
-- Background: #FFFFFF  
+## Ana Renkler
+- **Turuncu**
+- **Lacivert**
+- **Beyaz**
 
-## Ekranlar  
-1) Ana Sayfa
-	- Slider alanı
-	- Blog detay önizleme yazılarının bulunduğu kısım.
-	- Öne çıkan kategoriler 
+### Gece/Gündüz Modu
+**Hayır**
 
-2) Blog Kategori Sayfası
-	- İlgili kategoriye ait görsel alan
-	- Kategori detay yazılarının önizlemesi
-	- Filtreleme
+#### Gündüz Modu Renkleri
+- **Primary:** #FF7043  
+- **Secondary:** #ECEFF1  
+- **Background:** #FFFFFF  
 
-3) Blog Detay Sayfası
-	- Görsel içerik
-	- Seyahat yazıları
-	- Paylaşım seçenekleri
+## Ekranlar
 
+### Ana Sayfa
+- Slider alanı
+- Blog detay önizleme yazılarının bulunduğu kısım
+- Öne çıkan kategoriler
+
+### Blog Kategori Sayfası
+- İlgili kategoriye ait görsel alan
+- Kategori detay yazılarının önizlemesi
+- Filtreleme
+
+### Blog Detay Sayfası
+- Görsel içerik
+- Seyahat yazıları
+- Paylaşım seçenekleri
 
 ## Gelecek Planlaması
 - Blog detay sayfasına harita yönlendirmesi eklenecek.
@@ -45,20 +44,19 @@ Renk teorisine dayalı bir tasarımla kullanıcı dostu bir seyahat rehberi. Kul
 - Puanlama sistemi getirilecek.
 - Kullanıcı, seyahat yazısı ekleyebilecek.
 
-## Dil Desteği  
-- Türkçe  
+## Dil Desteği
+- **Türkçe**
 
-## Fonksiyonlar ve Özellikler  
-- Popüler Destinasyonlar: Ana sayfada öne çıkan birkaç destinasyon önerisi sunulur.  
-- Favorilere Ekleme: Kullanıcılar, önerilen destinasyonları favorilerine kaydedebilir.  
-- Hızlı Arama: Kullanıcılar, gitmek istedikleri destinasyonları arayabilir.  
+## Fonksiyonlar ve Özellikler
+- **Popüler Destinasyonlar:** Ana sayfada öne çıkan birkaç destinasyon önerisi sunulur.
+- **Favorilere Ekleme:** Kullanıcılar, önerilen destinasyonları favorilerine kaydedebilir.
+- **Hızlı Arama:** Kullanıcılar, gitmek istedikleri destinasyonları arayabilir.
 
-## Benzer Uygulamalar  
-- Gezimanya  
-- Culture Trip  
+## Benzer Uygulamalar
+- Gezimanya
+- Culture Trip
 - Tripadvisor
 
-### Geliştiriciler (Öğrenciler)
-- Yusuf Hakan Yargıcı | 2320161118
-- Rabiya Tanbaş | 2320161132
-- Recep Şahin | 2320161109
+## Geliştiriciler (Öğrenciler)
+- **Yusuf Hakan Yargıcı | 2320161118**  
+- **Recep Şahin | 2320161109**
