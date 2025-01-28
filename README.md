@@ -35,8 +35,8 @@ WanderWise, renk teorisine dayalı bir tasarımla geliştirilmiş, kullanıcı d
 
 ## Proje Fontları
 
--- Ubuntu (Bold & Medium)
--- OpenSans (Regular)
+- Ubuntu (Bold & Medium)
+- OpenSans (Regular)
 
 ## Kurulum Adımları
 
