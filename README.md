@@ -25,6 +25,19 @@ WanderWise, renk teorisine dayalı bir tasarımla geliştirilmiş, kullanıcı d
 - Favorilere ekleme
 - Hızlı arama ve filtreleme
 
+## Proje Renkleri
+
+- Turuncu (#FF7043)
+- Lacivert (#012169)
+- Açık Mavi (#81D4FA)
+- Beyaz (#FFFFFF)
+- Krem (#FFF3E0)
+
+## Proje Fontları
+
+-- Ubuntu (Bold & Medium)
+-- OpenSans (Regular)
+
 ## Kurulum Adımları
 
 ### Gereksinimler
