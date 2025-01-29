@@ -30,3 +30,7 @@ flutter:
       fonts:
         - asset: assets/fonts/OpenSans-Regular.ttf
           weight: 400
+  assets:
+    - assets/images
+    - assets/icons
+    - assets/logo
