@@ -12,7 +12,7 @@ WanderWise, renk teorisine dayalı bir tasarımla geliştirilmiş, kullanıcı d
   [Keyvan Arasteh](https://github.com/keyvanarasteh)
 
 - **Takım Üyeleri:**
-  - **Yusuf Hakan Yargıcı** | 2320161118 | Frontend Geliştirme ve Tasarım
+  - **Yusuf Hakan Yargıcı** | 2320161118 | Geliştirme ve Tasarım
   - **Recep Şahin** | 2320161109 | Proje Yönetimi
 ## Kullanılan Teknolojiler
 
