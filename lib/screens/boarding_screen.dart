@@ -1,40 +1,40 @@
 import 'package:flutter/material.dart';
-import 'home_screen.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:go_router/go_router.dart';
+import '../core/constants.dart';
 
-class BoardingScreen extends StatelessWidget {
+class LoadingScreen extends StatelessWidget {
+  const LoadingScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFF0F0F0),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisSize: MainAxisSize.min,
           children: [
-            Image.asset("../assets/WanderWise.png", height: 500), // Görsel
-            SizedBox(height: 32),
-            Text(
-              "Hoş Geldiniz",
-              style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
+            Image.asset(
+              'assets/logo/logo-mix.png',
+              height: 75,
+              width: 200,
+              fit: BoxFit.contain,
             ),
-            SizedBox(height: 16),
-            Text(
-              "Seyehat Etmenin En Keyifli Hali",
-              textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 18),
+            const SizedBox(height: 20),
+            const Text(
+              "WanderWise'a Hoş Geldiniz",
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 64),
-            Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: ElevatedButton(
-                onPressed: () {
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(builder: (context) => HomeScreen()),
-                  );
-                },
-                child: Text("Açıl Susam Açıl", textAlign: TextAlign.center, style: TextStyle(fontSize:18),),
+            const SizedBox(height: 30),
+            ElevatedButton(
+              onPressed: () => context.go("/home"),
+              style: ElevatedButton.styleFrom(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(5),
+                ),
               ),
+              child: const Text("Kayıt Ol, Keşfetmeye Başla!"),
             ),
           ],
         ),
