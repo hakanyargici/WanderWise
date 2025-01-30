@@ -24,7 +24,7 @@ class BottomMenu extends StatelessWidget {
           ),
           IconButton(
             onPressed: () {
-              context.go("/home");
+              context.go("/reservation");
             },
             icon: Icon(
               CupertinoIcons.calendar,
