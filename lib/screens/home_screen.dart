@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
-
 import '../core/constants.dart';
 import '../core/themes.dart';
 import '../widgets/bottom_menu.dart';
@@ -67,7 +66,7 @@ class HomeScreen extends StatelessWidget {
             ),
             ListTile(
               leading: Icon(CupertinoIcons.search),
-              title: Text('Arama Geçmişi'),
+              title: Text('Rezervasyon Yap'),
               onTap: () => context.push("/search"),
             ),
             ListTile(
@@ -102,11 +101,84 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             Expanded(
-              child: Center(
-                child: Text(
-                  "Bali",
-                  style: Theme.of(context).textTheme.bodyLarge,
-                ),
+              child: GridView.count(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 16.0, vertical: 0.0),
+                crossAxisCount: 3, // 3 öğe yan yana
+                crossAxisSpacing: 8,
+                mainAxisSpacing: 8,
+                childAspectRatio: 0.75,
+                children: [
+                  Column(
+                    children: [
+                      Expanded(
+                          child: Image.asset('assets/images/bali.jpg',
+                              fit: BoxFit.cover)),
+                      Text("Bali"),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      Expanded(
+                          child: Image.asset('assets/images/paris.jpg',
+                              fit: BoxFit.cover)),
+                      Text("Paris"),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      Expanded(
+                          child: Image.asset('assets/images/yenizellanda.jpg',
+                              fit: BoxFit.cover)),
+                      Text("Yeni Zellanda"),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            // Yeni eklenen alan: Ekranın yarısı
+            Container(
+              height: 250, // Bu kısmı ihtiyacınıza göre ayarlayabilirsiniz
+              child: Row(
+                children: [
+                  // Sol taraf: Görsel
+                  Expanded(
+                    child: Image.asset(
+                      'assets/images/bali.jpg', // Görseli değiştir
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  // Sağ taraf: Başlık, Metin ve Buton
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Bali - Tropik Cennet",
+                            style: Theme.of(context).textTheme.headlineSmall,
+                          ),
+                          const SizedBox(height: 8),
+                          Text(
+                            "Bali'nin eşsiz plajlarını ve doğal güzelliklerini keşfedin.",
+                            style: Theme.of(context).textTheme.bodyMedium,
+                          ),
+                          const SizedBox(height: 16),
+                          FilledButton.icon(
+                            onPressed: () {},
+                            icon: Icon(Icons.read_more, size: 18),
+                            label: Text('Daha Fazla Oku'),
+                            style: FilledButton.styleFrom(
+                              minimumSize: Size(double.infinity, 36),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
           ],
