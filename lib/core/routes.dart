@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import '../screens/boarding_screen.dart';
 import '../screens/home_screen.dart';
+import '../screens/reservation_screen.dart';
 
-// Router yapılandırması
 final router = GoRouter(
-  initialLocation: '/', // Başlangıç rotası
+  initialLocation: '/',
   routes: [
     GoRoute(
       path: '/',
@@ -19,6 +19,13 @@ final router = GoRouter(
       pageBuilder: (context, state) => NoTransitionPage<void>(
         key: state.pageKey,
         child: const HomeScreen(),
+      ),
+    ),
+    GoRoute(
+      path: '/reservation',
+      pageBuilder: (context, state) => NoTransitionPage<void>(
+        key: state.pageKey,
+        child: const ReservationScreen(),
       ),
     ),
   ],
