@@ -40,7 +40,7 @@ class BottomMenu extends StatelessWidget {
           ),
           IconButton(
             onPressed: () {
-              context.go("/search");
+              context.go("/trip");
             },
             icon: Icon(
               CupertinoIcons.location_solid,
