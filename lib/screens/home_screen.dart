@@ -1,185 +1,91 @@
 import 'package:flutter/material.dart';
-import 'blog_category.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:go_router/go_router.dart';
+import 'package:provider/provider.dart';
 
-class HomeScreen extends StatefulWidget {
-  @override
-  _HomeScreenState createState() => _HomeScreenState();
-}
+import '../core/constants.dart';
+import '../core/themes.dart';
+import '../widgets/bottom_menu.dart';
 
-class _HomeScreenState extends State<HomeScreen> {
-  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final screenWidth = MediaQuery.of(context).size.width;
-    final screenHeight = MediaQuery.of(context).size.height;
-
     return Scaffold(
-      key: _scaffoldKey,
-      drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: <Widget>[
-            DrawerHeader(
-              decoration: BoxDecoration(
-                color: Colors.blue,
-              ),
-              child: Column(
-                children: [
-                  Icon(Icons.account_circle, size: 50, color: Colors.white),
-                  SizedBox(height: 10),
-                  Text("Hoşgeldin, Keyvan!", style: TextStyle(fontSize: 18, color: Colors.white)),
-                ],
-              ),
-            ),
-            ListTile(
-              title: Text('Ana Sayfa'),
-              onTap: () {
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              title: Text('Seyahat Yazıları'),
-              onTap: () {
-                Navigator.pop(context);
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => BlogCategoryScreen()),
-                );
-              },
-            ),
-          ],
+      appBar: AppBar(
+        title: Consumer<ThemeProvider>(
+          builder: (context, themeProvider, child) {
+            return Image.asset(
+              themeProvider.logoAsset,
+              height: 75,
+              width: 200,
+              fit: BoxFit.contain,
+            );
+          },
         ),
-      ),
-      appBar: PreferredSize(
-        preferredSize: Size.fromHeight(80),
-        child: AppBar(
-          backgroundColor: Colors.blue,
-          leading: IconButton(
-            icon: Icon(Icons.menu, size: 35),
+        centerTitle: true,
+        actions: [
+          IconButton(
+            icon: Icon(CupertinoIcons.moon),
             onPressed: () {
-              _scaffoldKey.currentState?.openDrawer();
+              context.read<ThemeProvider>().toggleTheme();
             },
-          ),
-          title: Image.asset(
-            'assets/WanderWise.png',
-            width: screenWidth * 0.5, // Logonun genişliği
-            height: screenHeight * 0.5, // Logonun yüksekliği
-          ),
-        ),
-      ),
-      body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            // 1. Slider (Görsel Kaydırıcı)
-            Container(
-              height: 250,
-              child: PageView(
-                children: [
-                  Image.asset('../assets/sliderimage1.jpg', fit: BoxFit.cover),
-                  Image.asset('../assets/sliderimage2.jpg', fit: BoxFit.cover),
-                  Image.asset('../assets/sliderimage3.jpg', fit: BoxFit.cover),
-                ],
-              ),
-            ),
-
-            // 2. Blog Önizleme Kısımları
-            Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Text(
-                "Popüler Seyahat Yazıları",
-                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-              ),
-            ),
-            SizedBox(
-              height: 230, // Yüksekliği mobil uyumlu tutuyoruz
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children: [
-                  buildBlogPreview(
-                    'assets/paris.jpg',
-                    'Paris\'te 3 Gün: Gezi Rehberi',
-                  ),
-                  buildBlogPreview(
-                    '../assets/yenizellanda.jpg',
-                    'Yeni Zelanda: Doğanın Cenneti',
-                  ),
-                  buildBlogPreview(
-                    'assets/bali.jpg',
-                    'Bali\'nin En Güzel Yerleri',
-                  ),
-                ],
-              ),
-            ),
-
-            // 3. Popüler Kategoriler
-            Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Text(
-                "Popüler Kategoriler",
-                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-              ),
-            ),
-            GridView.count(
-              shrinkWrap: true,
-              physics: NeverScrollableScrollPhysics(),
-              crossAxisCount: 2,
-              childAspectRatio: 2,
-              children: [
-                buildCategoryCard('Doğa', Icons.nature),
-                buildCategoryCard('Kültür', Icons.account_balance),
-                buildCategoryCard('Yemek', Icons.restaurant),
-                buildCategoryCard('Tarihi Yerler', Icons.history),
-              ],
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-
-  Widget buildBlogPreview(String imagePath, String title) {
-    return Padding(
-      padding: const EdgeInsets.only(right: 16.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          ClipRRect(
-            borderRadius: BorderRadius.circular(10),
-            child: Image.asset(imagePath, width: 180, height: 120, fit: BoxFit.cover),
-          ),
-          SizedBox(height: 8),
-          Text(
-            title,
-            style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-            maxLines: 2,
-            overflow: TextOverflow.ellipsis,
           ),
         ],
       ),
-    );
-  }
-
-  Widget buildCategoryCard(String category, IconData icon) {
-    return Card(
-      margin: EdgeInsets.all(8),
-      child: InkWell(
-        onTap: () {
-          // Kategoriye tıklayınca yapılacak işlemler
-        },
+      drawer: Drawer(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(icon, size: 40, color: Colors.blue),
-            SizedBox(height: 10),
-            Text(
-              category,
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            UserAccountsDrawerHeader(
+              currentAccountPicture: CircleAvatar(
+                backgroundColor: Theme.of(context).colorScheme.primaryContainer,
+                child: Icon(
+                  CupertinoIcons.person_circle,
+                  size: 50,
+                  color: Theme.of(context).colorScheme.onPrimaryContainer,
+                ),
+              ),
+              accountName: Text("Hoşgeldiniz"),
+              accountEmail: null,
+              decoration: BoxDecoration(
+                color: Theme.of(context).colorScheme.primary,
+              ),
+            ),
+            ListTile(
+              leading: Icon(CupertinoIcons.home),
+              title: Text('Ana Sayfa'),
+              onTap: () => Navigator.pop(context),
+            ),
+            ListTile(
+              leading: Icon(CupertinoIcons.search),
+              title: Text('Arama Geçmişi'),
+              onTap: () => context.push("/search"),
+            ),
+            ListTile(
+              leading: Icon(CupertinoIcons.person),
+              title: Text('Profil'),
+              onTap: () => context.push("/profile"),
+            ),
+            ListTile(
+              leading: Icon(CupertinoIcons.settings),
+              title: Text('Ayarlar'),
+              onTap: () => context.push("/settings"),
+            ),
+            Spacer(),
+            Divider(),
+            ListTile(
+              leading: Icon(Icons.logout),
+              title: Text('Çıkış Yap'),
+              onTap: () => context.go("/login"),
             ),
           ],
         ),
       ),
+      body: SafeArea(
+        child: Column(),
+      ),
+      bottomNavigationBar: BottomMenu(),
     );
   }
 }
