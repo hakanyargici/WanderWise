@@ -60,31 +60,45 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             ListTile(
-              leading: Icon(CupertinoIcons.home),
-              title: Text('Ana Sayfa'),
-              onTap: () => Navigator.pop(context),
-            ),
-            ListTile(
-              leading: Icon(CupertinoIcons.search),
-              title: Text('Rezervasyon Yap'),
-              onTap: () => context.push("/search"),
-            ),
-            ListTile(
               leading: Icon(CupertinoIcons.person),
-              title: Text('Profil'),
-              onTap: () => context.push("/profile"),
+              title: Text('Adı: YUSUF HAKAN YARGICI'),
             ),
             ListTile(
-              leading: Icon(CupertinoIcons.settings),
-              title: Text('Ayarlar'),
-              onTap: () => context.push("/settings"),
+              leading: Icon(CupertinoIcons.mail),
+              title: Text('Öğrenci Numarası: 2320161118'),
             ),
-            Spacer(),
+            ListTile(
+              leading: Icon(CupertinoIcons.calendar),
+              title: Text('Doğum Tarihi: 25/06/01'),
+            ),
+            ListTile(
+              leading: Icon(CupertinoIcons.mail_solid),
+              title: Text('E-Posta: hakanyargici@outlook.com'),
+            ),
+            ListTile(
+              leading: Icon(CupertinoIcons.phone),
+              title: Text('Telefon: 0 545 650 9460'),
+            ),
             Divider(),
             ListTile(
-              leading: Icon(Icons.logout),
-              title: Text('Çıkış Yap'),
-              onTap: () => context.go("/login"),
+              leading: Icon(CupertinoIcons.person),
+              title: Text('Adı: RECEP ŞAHİN'),
+            ),
+            ListTile(
+              leading: Icon(CupertinoIcons.mail),
+              title: Text('Öğrenci Numarası: 2320161109'),
+            ),
+            ListTile(
+              leading: Icon(CupertinoIcons.calendar),
+              title: Text('Doğum Tarihi: 21/08/03'),
+            ),
+            ListTile(
+              leading: Icon(CupertinoIcons.mail_solid),
+              title: Text('E-Posta: recepsahin@outlook.com'),
+            ),
+            ListTile(
+              leading: Icon(CupertinoIcons.phone),
+              title: Text('Telefon: 0 546 547 5214'),
             ),
           ],
         ),

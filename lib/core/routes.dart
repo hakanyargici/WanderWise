@@ -7,6 +7,7 @@ import '../screens/search_screen.dart';
 import '../screens/trip_screen.dart';
 import '../screens/profile_screen.dart';
 import '../screens/login_screen.dart';
+import '../screens/register_screen.dart';
 
 final router = GoRouter(
   initialLocation: '/',
@@ -58,6 +59,13 @@ final router = GoRouter(
       pageBuilder: (context, state) => NoTransitionPage<void>(
         key: state.pageKey,
         child: const LoginScreen(),
+      ),
+    ),
+    GoRoute(
+      path: '/register',
+      pageBuilder: (context, state) => NoTransitionPage<void>(
+        key: state.pageKey,
+        child: const RegisterScreen(),
       ),
     ),
   ],
