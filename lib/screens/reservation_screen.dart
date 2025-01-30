@@ -20,7 +20,10 @@ class _ReservationScreenState extends State<ReservationScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Rezervasyon'),
+        title: Text(
+          "Rezervasyon",
+          style: Theme.of(context).textTheme.headlineSmall,
+        ),
         actions: [
           IconButton(
             icon: Icon(Icons.filter_list),
