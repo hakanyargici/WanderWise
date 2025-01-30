@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 import '../screens/boarding_screen.dart';
 import '../screens/home_screen.dart';
 import '../screens/reservation_screen.dart';
+import '../screens/search_screen.dart';
 
 final router = GoRouter(
   initialLocation: '/',
@@ -26,6 +27,13 @@ final router = GoRouter(
       pageBuilder: (context, state) => NoTransitionPage<void>(
         key: state.pageKey,
         child: const ReservationScreen(),
+      ),
+    ),
+    GoRoute(
+      path: '/search',
+      pageBuilder: (context, state) => NoTransitionPage<void>(
+        key: state.pageKey,
+        child: const SearchScreen(),
       ),
     ),
   ],
