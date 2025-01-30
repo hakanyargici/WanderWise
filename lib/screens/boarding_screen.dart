@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:go_router/go_router.dart';
-import '../core/constants.dart';
 
 class LoadingScreen extends StatelessWidget {
   const LoadingScreen({super.key});
