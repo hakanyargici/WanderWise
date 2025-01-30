@@ -100,6 +100,13 @@ class HomeScreen extends StatelessWidget {
               leading: Icon(CupertinoIcons.phone),
               title: Text('Telefon: 0 546 547 5214'),
             ),
+            Spacer(),
+            Divider(),
+            ListTile(
+              leading: Icon(Icons.logout),
+              title: Text('Çıkış Yap'),
+              onTap: () => context.go("/login"),
+            ),
           ],
         ),
       ),
