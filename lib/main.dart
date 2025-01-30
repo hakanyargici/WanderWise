@@ -1,27 +1,32 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'screens/boarding_screen.dart';
-import 'screens/home_screen.dart';
+import 'package:provider/provider.dart';
+import 'core/routes.dart';
+import 'core/themes.dart';
 
 void main() {
-  runApp(MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  runApp(
+    ChangeNotifierProvider(
+      create: (_) => ThemeProvider(),
+      child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primaryColor: Color(0xFF012169),
-        textTheme: GoogleFonts.interTextTheme(
-          Theme.of(context).textTheme,
-        ).apply(
-          bodyColor: Color(0xFF012169),
-          displayColor: Color(0xFF012169),
-        ),
-      ),
-      home: BoardingScreen(),
-    );
+    return Consumer<ThemeProvider>(builder: (context, themeProvider, child) {
+      return MaterialApp.router(
+        title: 'Wander Wise',
+        themeMode: themeProvider.isDark ? ThemeMode.dark : ThemeMode.light,
+        theme: lightTheme,
+        darkTheme: darkTheme,
+        routerConfig: router,
+        debugShowCheckedModeBanner: false,
+      );
+    });
   }
 }
