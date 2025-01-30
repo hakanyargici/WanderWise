@@ -14,7 +14,7 @@ class ProfileScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Rezervasyon",
+          "Profil",
           style: Theme.of(context).textTheme.headlineSmall,
         ),
         actions: [
