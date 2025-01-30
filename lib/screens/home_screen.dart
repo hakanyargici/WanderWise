@@ -118,7 +118,7 @@ class HomeScreen extends StatelessWidget {
               child: GridView.count(
                 padding:
                     const EdgeInsets.symmetric(horizontal: 16.0, vertical: 0.0),
-                crossAxisCount: 3, // 3 öğe yan yana
+                crossAxisCount: 3,
                 crossAxisSpacing: 8,
                 mainAxisSpacing: 8,
                 childAspectRatio: 0.75,
@@ -150,19 +150,16 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
-            // Yeni eklenen alan: Ekranın yarısı
             Container(
-              height: 250, // Bu kısmı ihtiyacınıza göre ayarlayabilirsiniz
+              height: 250,
               child: Row(
                 children: [
-                  // Sol taraf: Görsel
                   Expanded(
                     child: Image.asset(
-                      'assets/images/bali.jpg', // Görseli değiştir
+                      'assets/images/bali.jpg',
                       fit: BoxFit.cover,
                     ),
                   ),
-                  // Sağ taraf: Başlık, Metin ve Buton
                   Expanded(
                     child: Padding(
                       padding: const EdgeInsets.all(16.0),
