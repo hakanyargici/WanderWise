@@ -4,6 +4,8 @@ import '../screens/boarding_screen.dart';
 import '../screens/home_screen.dart';
 import '../screens/reservation_screen.dart';
 import '../screens/search_screen.dart';
+import '../screens/trip_screen.dart';
+import '../screens/profile_screen.dart';
 
 final router = GoRouter(
   initialLocation: '/',
@@ -34,6 +36,20 @@ final router = GoRouter(
       pageBuilder: (context, state) => NoTransitionPage<void>(
         key: state.pageKey,
         child: const SearchScreen(),
+      ),
+    ),
+    GoRoute(
+      path: '/trip',
+      pageBuilder: (context, state) => NoTransitionPage<void>(
+        key: state.pageKey,
+        child: const TripScreen(),
+      ),
+    ),
+    GoRoute(
+      path: '/profile',
+      pageBuilder: (context, state) => NoTransitionPage<void>(
+        key: state.pageKey,
+        child: const ProfileScreen(),
       ),
     ),
   ],
