@@ -52,12 +52,11 @@ class _LoginScreenState extends State<LoginScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // Logo eklemek için Image.asset
               Image.asset(
-                'assets/logo/logo-mix.png', // Logonuzun yolu
-                height: 100, // Logo boyutunu ihtiyaca göre ayarlayabilirsiniz
+                'assets/logo/logo-mix.png',
+                height: 100,
               ),
-              SizedBox(height: 32), // Logo ve diğer öğeler arasında boşluk
+              SizedBox(height: 32),
               TextField(
                 controller: epostaYonetici,
                 decoration: InputDecoration(

@@ -8,7 +8,6 @@ class SearchScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: colors["primary"],
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
@@ -26,9 +25,7 @@ class SearchScreen extends StatelessWidget {
                 prefixIcon: Icon(Icons.search),
                 suffixIcon: IconButton(
                   icon: Icon(Icons.tune),
-                  onPressed: () {
-                    // Filtre dialog
-                  },
+                  onPressed: () {},
                 ),
               ),
             ),
