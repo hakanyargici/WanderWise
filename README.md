@@ -1,6 +1,6 @@
 # WanderWise
 
-![WanderWise-Logo](assets/logo-mix.png "WanderWise Logo")
+![WanderWise-Logo](assets/logo/logo-mix.png "WanderWise Logo")
 
 ## Proje Hakkında
 
