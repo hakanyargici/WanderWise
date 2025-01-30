@@ -26,10 +26,18 @@ class HomeScreen extends StatelessWidget {
         ),
         centerTitle: true,
         actions: [
-          IconButton(
-            icon: Icon(CupertinoIcons.moon),
-            onPressed: () {
-              context.read<ThemeProvider>().toggleTheme();
+          Consumer<ThemeProvider>(
+            builder: (context, themeProvider, child) {
+              return IconButton(
+                icon: Icon(
+                  themeProvider.isDark
+                      ? CupertinoIcons.moon_fill
+                      : CupertinoIcons.sun_max_fill,
+                ),
+                onPressed: () {
+                  context.read<ThemeProvider>().toggleTheme();
+                },
+              );
             },
           ),
         ],
@@ -83,7 +91,26 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
       body: SafeArea(
-        child: Column(),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Text(
+                "Popüler Konumları Keşfedin",
+                style: Theme.of(context).textTheme.headlineMedium,
+              ),
+            ),
+            Expanded(
+              child: Center(
+                child: Text(
+                  "Bali",
+                  style: Theme.of(context).textTheme.bodyLarge,
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
       bottomNavigationBar: BottomMenu(),
     );
