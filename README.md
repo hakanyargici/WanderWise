@@ -14,6 +14,20 @@ WanderWise, renk teorisine dayalı bir tasarımla geliştirilmiş, kullanıcı d
 - **Takım Üyeleri:**
   - **Yusuf Hakan Yargıcı** | 2320161118 | Geliştirme ve Tasarım
   - **Recep Şahin** | 2320161109 | Proje Yönetimi
+
+
+## Proje Videosu
+
+https://youtu.be/fvIYl7G3Qhw
+
+## Ekran Görüntüleri
+
+![Ana Sayfa Gece Modu](assets/Readme/ana-sayfa-gece.png "Ana Sayfa Gece Modu")
+![Ana Sayfa Gündüz Modu](assets/Readme/ana-sayfa-gündüz.png "Ana Sayfa Gündüz Modu")
+![Arama Sayfası](assets/Readme/arama.png "Arama Sayfası")
+![Profil Sayfası](assets/Readme/profil.png "Profil Sayfası")
+![Rezervasyon Sayfası](assets/Readme/rezervasyon.png "Rezervasyon Sayfası")
+
 ## Kullanılan Teknolojiler
 
 - Flutter
